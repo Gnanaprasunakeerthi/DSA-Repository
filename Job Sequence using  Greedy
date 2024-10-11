@@ -1,0 +1,50 @@
+1- Job Sequence
+      class JobComparator implements Comparator<Job>//compare the jobs and profits according to their profit level 
+{
+    public int compare(Job j1,Job j2){
+        return j2.profit-j1.profit;
+    }
+    
+}
+class Solution
+{
+    //Function to find the maximum profit and the number of jobs done.
+    int[] JobScheduling(Job arr[], int n)
+    {
+        // Your code here
+        // sorting the given array accordin to their jobs and profits level sequence
+        Arrays.sort(arr, new JobComparator());
+        // to store the profit creating tot_profit
+        // to store profit creating  tot_job
+        int res=0; int tot_job=0;
+        boolean[] slot = new boolean[n];
+        // for the iteratint the sorted jobs in the manner
+        for(int i=0; i<n;i++){
+            //for itreating the total arr[] of jobs by the sequence 
+            for(int j=arr[i].deadline-1 ; j>=0;j--){
+                // check the freeslots using loops and if there fill their profits using tot_profit
+                if(slot[j]==false){
+                    res+=arr[i].profit;tot_job++;
+                    slot[j]=true;
+                    break;
+                }
+            }
+            
+        }
+        int last[]= {tot_job,res};
+        return last;
+        
+    }
+
+}
+
+/*
+class Job {
+    int id, profit, deadline;
+    Job(int x, int y, int z){
+        this.id = x;
+        this.deadline = y;
+        this.profit = z; 
+    }
+}
+*/ 
