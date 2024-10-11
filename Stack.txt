@@ -1,0 +1,164 @@
+// Basic stack program
+// demonstartion of stack porgram using arrays
+import java.util.Scanner;
+import java.util.Stack;
+class Main{
+    public static void main(String[] args) {
+        //taking input
+        Scanner input= new Scanner(System.in);
+        Stack<Integer> stack = new Stack<>();
+        System.out.println("enter no.of.Elements:");
+        //using arrays:-
+        int n = input.nextInt();
+        int[] elements = new int[n];
+        //create  for loop to take the input values
+        for(int i =0 ; i<n;i++){
+            //storing the taken inputs
+            elements[i]= input.nextInt();
+            //using push operation to insert the elements into the array
+            stack.push(elements[i]);
+            
+        }
+        System.out.println(stack);
+    }
+}
+
+Output:-
+enter no.of.Elements:
+3
+10
+20
+30
+[10, 20, 30]
+
+=== Code Execution Successful ===
+
+
+
+2 : pop Opertion
+
+
+// Basic stack program
+// demonstartion of stack porgram using arrays
+import java.util.Scanner;
+import java.util.Stack;
+class Main{
+    public static void main(String[] args) {
+        //taking input
+        Scanner input= new Scanner(System.in);
+        Stack<Integer> stack = new Stack<>();
+        System.out.println("enter no.of.Elements:");
+        //using arrays:-
+        int n = input.nextInt();
+        int[] elements = new int[n];
+        //create  for loop to take the input values
+        for(int i =0 ; i<n;i++){
+            //storing the taken inputs
+            elements[i]= input.nextInt();
+            //using push operation to insert the elements into the array
+            stack.push(elements[i]);
+            
+            
+        }
+        System.out.println(stack);
+        // operation pop() to remove the top element
+        if(!stack.isEmpty()){
+            stack.pop();
+        }
+        System.out.println(stack);
+    }
+}
+
+Output :
+
+enter no.of.Elements:
+3
+10
+20
+30
+
+
+[10, 20, 30]
+[10, 20]
+
+=== Code Execution Successful ===
+
+
+
+3:- Element need to be searched using stack 
+
+
+import java.util.Scanner;
+import java.util.Stack;
+class Main{
+    public static void main(String[] args) {
+        //taking input
+        Scanner input= new Scanner(System.in);
+        Stack<Integer> stack = new Stack<>();
+        System.out.println("enter no.of.Elements:");
+        //using arrays:-
+        int n = input.nextInt();
+        int[] elements = new int[n];
+        //create  for loop to take the input values
+        for(int i =0 ; i<n;i++){
+            //storing the taken inputs
+            elements[i]= input.nextInt();
+            //using push operation to insert the elements into the array
+            stack.push(elements[i]);
+            
+            
+        }
+        System.out.println(stack);
+        // search for an element 
+        int elementtosearch = input.nextInt();
+        int findposition = stack.search(elementtosearch);
+    
+        System.out.println(findposition);
+    }
+}
+
+
+output:-
+
+enter no.of.Elements:
+3
+10
+20
+30
+[10, 20, 30]
+20
+2
+
+
+3:- Reverse a string using Stack
+You are given a string S, the task is to reverse the string using stack.
+
+Solution;-
+class Solution {
+    
+    public String reverse(String S){
+        //code here
+        Stack<Character> stack = new Stack<>();
+        for(char c : S.toCharArray()){
+            stack.push(c);
+        }
+        StringBuilder reversed = new StringBuilder ();
+        while(!stack.isEmpty()){
+            reversed.append(stack.pop());
+        }
+        return reversed.toString();
+        
+    }
+    public static void main(String[] args){
+        String s = "GeeksforGeeks";
+        Solution solution = new Solution();
+        System.out.println(solution.reverse(s));
+    }
+
+} 
+
+output : 
+For Input: 
+GeeksforGeeks
+Your Output: 
+skeeGrofskeeG
