@@ -1,4 +1,4 @@
-```java
+
 // demonstartion of stack porgram using arrays
 import java.util.Scanner;
 import java.util.Stack;
@@ -29,8 +29,7 @@ enter no.of.Elements:
 10
 20
 30
-[10, 20, 30]
-```
+[10, 20 ,30]
 
 === Code Execution Successful ===
 
