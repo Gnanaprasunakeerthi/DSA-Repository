@@ -1,4 +1,3 @@
-```java
 // demonstartion of stack porgram using arrays
 import java.util.Scanner;
 import java.util.Stack;
